@@ -1,0 +1,25 @@
+spanning tree:- Tree dont habving a cycle is called spanning tree
+	no of edge in spanning tree is one less than no of vertex;
+	no of vertex=n;
+	no of edge =n-1;
+	//total no of spannuing tree possible with n vertex is (n spanning tree).
+	in general
+		no of spanning tree==================================
+				   |E|
+				      C		- (no of cycle) 
+				       |V|-1
+			=============================================
+	where C represents Combination
+	|E| is no of edge.
+	|V| is no of vertex.
+
+Problems:
+	* To find minimum cost spanning tree of a weighted graph.
+	2 greedy methods are available for that:-
+		1). Prims algorithm.
+			*First select the minimum cost edge.
+			*Than select the minimum cost edge connected to the already choosen edge.
+		2). Kruskals Algorithm.
+			*Always select minimum cost edge but if it is forming a cycle than don't 				 include it in the solution.
+			*Best way to use kruskals method is (mean heap).
+

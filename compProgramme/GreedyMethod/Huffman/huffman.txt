@@ -1,0 +1,58 @@
+problem:- You have given a large string of text with some repeated alphabet in it.
+	You have to reduce the whole message in the coding such that its total size gets 		reduce. 
+	Sample:-
+		message:-	BCCABBDDAECCBBAEDDCC
+		
+		coding used is binary bits 3 bit digit instead of 8 bit char code.
+		==================================================================
+		Char	|	count	|	code	|
+		=========================================
+		A	|	3	|	000	|
+		B	|	5	|	001	|
+		C	|	6	|	010	|
+		D	|	4	|	011	|
+		E	|	2	|	100	|
+		=========================================
+	
+	There are total of 20 char. if ascii cod eis used than 20*8 = 160 bits is used.
+
+	But here 3 bits for code of each char is used thus total of 3*20 = 60 bits is required.
+	also some extra code for preparing this above table as template is required.
+
+	Huffman said that we should not use fixed size coding for code of alphabets.
+	use optimal merge pattern to code. e.g.
+			
+				20
+			       /  \
+			     0/    \1
+			     /      \
+			    9	     \
+			   / \	      \
+			 0/   \1       \
+			 /     \        \
+			5	\     	 11
+		       / \	 \	 /\
+		     0/	  \1	  \    0/  \1
+		     /     \       \   /    \
+		===============================
+		   |2|	   |3|     |4| |5|   |6|
+		================================
+		    E 	    A	    D   B     C
+		================================
+	Hence new coding should be:=
+		=========================================
+		Char	|	Count	|	code	|
+		=========================================
+		A	|	3	|	001	|
+		B	|	5	|	10	|
+		C	|	6	|	11	|
+		D	|	4	|	01	|
+		E	|	2	|	000	|
+		=========================================
+
+	Hence the new size of message nad table be:-
+	Message)- 3*3 + 2*5 + 2*6 + 2*4 + 2*3 = 45bits
+	Table)-	  5*8 +	12 = 52bits
+	===============================================
+	Total= 97bits.
+	===============================================	

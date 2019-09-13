@@ -1,0 +1,17 @@
+problem:- given n no of jobs with their profit and weight.
+	You have the constraint of maximum wight.
+	You have to choose the job such that you can get the maximum profit.
+	#Optimisation problem
+	
+
+	Sample input:-
+		Object	1	2	3	4	5	6	7
+		Profit	10	5	15	7	6	18	3
+		Weight	2	3	5	7	1	4	1
+		----------------------------------------------------------
+		p/w	5	1.33	3	1	6	4.5	3
+
+	Approach:-
+		1). first calculate profit per weight of all the job.
+		2). arrange the job in the decreasing order of the p/w.
+		3). select the job according to the p/w in decreasing order

@@ -1,0 +1,21 @@
+problem:-given n no of jobs with deadline and profit. You have to sequence the job in such that you 		can utilise all the time within deadline and have maximum profit.
+
+	sample:- 
+	job		1	2	3	4	5	6	7
+	profit		35	30	25	20	15	12	5
+	deadline	3	4	4	2	3	1	2
+
+Approach:-
+	1). Arrange the job in decreasing order of profit.
+	2). the job with maximum profit should be done in last hour of its deadline.
+	3). If the job next to max profit have same deadline than put it in the slot before of slot 		    having max profit.
+	
+	Solution of above sample is:-
+		_________________________________________________________________
+		|		|		|		|		|
+		|		|		|		|		|
+		|	20	|	25	|	35	|	30	|
+		|		|		|		|		|
+		|		|		|		|		|
+		`````````````````````````````````````````````````````````````````
+time slot:-	0		1		2		3		4
